@@ -1,24 +1,28 @@
-require "test/unit"
+# encoding: utf-8
+# http://dojopuzzles.com/problemas/exibe/calculando-estatisticas-simples/
+
+require 'test/unit'
 require_relative 'calcula_estatistica_simples'
 
-class ValorTest < Test::Unit::TestCase
+# Calcula minimo, maximo, total e media
+class CalculaTest < Test::Unit::TestCase
   def test_minimo
-    ces = Valor.new("6, 9, 15, -2, 92, 11")
-    assert_equal -2, ces.minimo
+    valor = Calcula.new('6, 9, 15, -2, 92, 11')
+    assert_equal(-2, valor.minimo)
   end
 
   def test_maximo
-    ces = Valor.new("6, 9, 15, -2, 92, 11")
-    assert_equal 92, ces.maximo
+    valor = Calcula.new('6, 9, 15, -2, 92, 11')
+    assert_equal(92, valor.maximo)
   end
 
   def test_total
-    ces = Valor.new("6, 9, 15, -2, 92, 11")
-    assert_equal 6, ces.total
+    valor = Calcula.new('6, 9, 15, -2, 92, 11')
+    assert_equal(6, valor.total)
   end
 
   def test_media
-    ces = Valor.new("6, 9, 15, -2, 92, 11")
-    assert_in_delta 21.83, ces.media, 0.01
+    valor = Calcula.new('6, 9, 15, -2, 92, 11')
+    assert_in_delta(21.83, valor.media, 0.01)
   end
 end
