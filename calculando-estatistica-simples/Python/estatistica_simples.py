@@ -1,3 +1,4 @@
+# python 3.5
 """http://dojopuzzles.com/problemas/exibe/calculando-estatisticas-simples/."""
 
 
